@@ -1,6 +1,6 @@
 angular
     .module("cstApp")
-    .controller("CstResourcesFactory", CstResourcesFactory);
+    .factory("CstResourcesFactory", CstResourcesFactory);
 
     CstResourcesFactory.$inject = [
         "$http"

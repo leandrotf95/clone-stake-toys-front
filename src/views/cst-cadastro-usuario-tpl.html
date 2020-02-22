@@ -1,0 +1,18 @@
+<div class="container" ng-controller="CstCadastroUsuarioController as vm">
+    <div class="row">
+        <form>
+            <label for="usuario">Usuário</label>
+            <input type="text" class="form-control" id="usuario">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email">
+            <label for="senha">Senha</label>
+            <input type="{{vm.typeInputPassword}}" class="form-control" id="senha">
+        </form>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-danger">Cancelar</button>
+            <button class="btn btn-primary">Cadastrar</button>
+        </div>
+    </div>
+</div>

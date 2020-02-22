@@ -1,12 +1,12 @@
 angular
     .module("cstApp")
-    .controller("CstLoginController", CstLoginController);
+    .controller("CstCadastroUsuarioController", CstCadastroUsuarioController);
 
-    CstLoginController.$inject = [
+    CstCadastroUsuarioController.$inject = [
         "CstResourcesFactory"
     ];
 
-    function CstLoginController(
+    function CstCadastroUsuarioController(
         CstResourcesFactory
     )
     {
@@ -18,7 +18,7 @@ angular
         vm.revelarOcultarSenha = revelarOcultarSenha;
 
         //variáveis públicas:
-        vm.usuario = {};
+        vm.novoUsuario = {};
         vm.typeInputPassword = "password";
 
         //variáveis privadas:
