@@ -12,11 +12,11 @@ angular
     {
 
         $routeProvider
-            .when('/inicial', {
-                templateUrl: './views/cst-inicial-tpl.html'
+            .when('/login', {
+                templateUrl: './views/cst-login-tpl.html'
             })
             .otherwise({
-                redirectTo: 'inicial'
+                redirectTo: 'login'
             });
 
     }

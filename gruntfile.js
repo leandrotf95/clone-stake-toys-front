@@ -27,7 +27,7 @@ module.exports = function (grunt) {
             dev: {
                 bsFiles: {
                     src : [
-                        './src/views/*.html'
+                        './src/**/*'
                     ]
                 },
                 options: {
