@@ -3,21 +3,26 @@ angular
     .controller("CstLoginController", CstLoginController);
 
     CstLoginController.$inject = [
-        "$scope"
+        
     ];
 
     function CstLoginController(
-        $scope
+        
     )
     {
 
         const vm = this;
 
-        vm.teste = teste;
-        vm.senha = '';
+        vm.revelarOcultarSenha = revelarOcultarSenha;
 
-        function teste() {
-            $scope.$broadcast("teste");
+        vm.typeInput = "password";
+
+        function revelarOcultarSenha(senha) {
+            if(!senha) {
+                vm.typeInput = "password";
+                return;
+            }
+            vm.typeInput = (vm.typeInput === "password") ? "text" : "password"; 
         }
 
     }
