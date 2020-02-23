@@ -26,7 +26,7 @@ angular
 
         //definição das funções:
 
-        function revelarOcultarSenha(senha) {
+        function revelarOcultarSenha() {
             vm.typeInputPassword = (vm.typeInputPassword === "password") ? "text" : "password";
         }
 

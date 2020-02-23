@@ -3,16 +3,22 @@ angular
     .factory("CstResourcesFactory", CstResourcesFactory);
 
     CstResourcesFactory.$inject = [
-        "$http"
+        "$http",
+        "ConfigUrl"
     ];
 
     function CstResourcesFactory(
-        $http
+        $http,
+        ConfigUrl
     )
     {
 
         return {
-
+            cadastrarNovoUsuario: _cadastrarNovoUsuario
         };
+
+        function _cadastrarNovoUsuario(usuario) {
+            return $http.post(ConfigUrl.apiPath + "/usuario/cadastrar", usuario);
+        }
 
     }
