@@ -16,6 +16,7 @@ angular
 
         //funções públicas:
         vm.revelarOcultarSenha = revelarOcultarSenha;
+        vm.cadastrarUsuario = cadastrarUsuario;
 
         //variáveis públicas:
         vm.novoUsuario = {};
@@ -26,8 +27,18 @@ angular
 
         //definição das funções:
 
-        function revelarOcultarSenha(senha) {
+        function revelarOcultarSenha() {
             vm.typeInputPassword = (vm.typeInputPassword === "password") ? "text" : "password";
+        }
+
+        function cadastrarUsuario(novoUsuario) {
+            factoryResources.cadastrarNovoUsuario(novoUsuario)
+                .then(function() {
+
+                })
+                .catch(function() {
+
+                });
         }
 
     }

@@ -1,18 +1,24 @@
 <div class="container" ng-controller="CstCadastroUsuarioController as vm">
-    <div class="row">
-        <form>
+    <div style="width: 50%; margin: 5% auto 0 auto;">
+        <form name="cadastroNovoUsuario" novalidate style="margin-bottom: 5%;">
             <label for="usuario">Usuário</label>
-            <input type="text" class="form-control" id="usuario">
+            <input type="text" class="form-control" id="usuario" ng-model="vm.novoUsuario.nomeUsuario" ng-required="true">
             <label for="email">Email</label>
-            <input type="text" class="form-control" id="email">
+            <input type="text" class="form-control" id="email" ng-model="vm.novoUsuario.email" ng-required="true">
             <label for="senha">Senha</label>
-            <input type="{{vm.typeInputPassword}}" class="form-control" id="senha">
+            <div class="input-group">
+                <input type="{{vm.typeInputPassword}}" class="form-control" id="senha" ng-model="vm.novoUsuario.senha" ng-required="true">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-default input-group-text" ng-click="vm.revelarOcultarSenha()">
+                        <img src="../img/hidden.png" alt="" ng-show="vm.typeInputPassword === 'password'">
+                        <img src="../img/eye.png" alt="" ng-show="vm.typeInputPassword === 'text'">
+                    </button>
+                </div>
+            </div>
         </form>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <button class="btn btn-danger">Cancelar</button>
-            <button class="btn btn-primary">Cadastrar</button>
+        <div style="float: right;">
+            <button class="btn btn-primary" ng-click="vm.cadastrarUsuario(vm.novoUsuario)" ng-disabled="cadastroNovoUsuario.$invalid">Cadastrar</button>
+            <a href="#!/login" class="btn btn-danger">Cancelar</a>
         </div>
     </div>
 </div>

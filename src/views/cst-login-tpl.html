@@ -6,7 +6,7 @@
     <div class="input-group">
         <input type="{{vm.typeInputPassword}}" class="form-control" id="senha" ng-model="vm.usuario.senha" placeholder="Senha" revelar-senha>
         <div class="input-group-append">
-            <button class="btn btn-outline-default input-group-text" ng-click="vm.revelarOcultarSenha(vm.usuario.senha)">
+            <button class="btn btn-outline-default input-group-text" ng-click="vm.revelarOcultarSenha()">
                 <img src="../img/hidden.png" alt="" ng-show="vm.typeInputPassword === 'password'">
                 <img src="../img/eye.png" alt="" ng-show="vm.typeInputPassword === 'text'">
             </button>
